@@ -1,0 +1,6 @@
+streamlit
+llama-index
+tree-sitter
+tree-sitter-languages
+streamlit_chat
+pyvis
