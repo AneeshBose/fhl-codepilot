@@ -5,7 +5,7 @@ import os
 
 def main():
     st.set_page_config(page_title="CodePilot", layout="wide")
-    st.title("CodePilot - Codebase Query Interface")
+    st.title("CodePilot - AI Powered Codebase Assistant")
     st.sidebar.header("Setup")
     # Sidebar
     with st.sidebar:
@@ -83,12 +83,12 @@ def load_indices(repo_name, project_dir):
     llm_settings = {
         'temperature': 0.2,
         'model': 'gpt-4',
-        'api_key': "API-KEY"
+        'api_key': os.getenv("OPENAI_API_KEY")
     }
     embedding_settings = {
         'model': "text-embedding-3-small",
         'embed_batch_size': 100,
-        'api_key': "API-KEY"
+        'api_key': os.getenv("OPENAI_API_KEY")
     }
     try:
         st.session_state.chat_history = []
