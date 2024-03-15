@@ -16,7 +16,7 @@ class KnowledgeGraphGenerator:
         return language, parser
 
     def load_scm_file(self):
-        scm_path = "app/scm_files/c_sharp_scm.scm"
+        scm_path = "src/scm_files/c_sharp_scm.scm"
         with open(scm_path, 'r') as file:
             return file.read()
 
