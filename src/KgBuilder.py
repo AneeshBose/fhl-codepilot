@@ -7,13 +7,8 @@ class KnowledgeGraphGenerator:
 
     def __init__(self, project_dir):
         self.project_dir = project_dir
-        self.language, self.parser = self.initialize_parser()
+        self.language, self.parser = get_language("c_sharp"), get_parser("c_sharp")
         self.scm_file = self.load_scm_file()
-
-    def initialize_parser(self):
-        language = get_language("c_sharp")
-        parser = get_parser("c_sharp")
-        return language, parser
 
     def load_scm_file(self):
         scm_path = "app/scm_files/c_sharp_scm.scm"
