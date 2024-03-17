@@ -5,9 +5,9 @@ class KnowledgeGraphGenerator:
     # Using a class variable as a cache to store knowledge graph data for project directories
     _cache = {}
 
-    def __init__(self, project_dir):
+    def __init__(self, project_dir, lang = "c_sharp"):
         self.project_dir = project_dir
-        self.language, self.parser = get_language("c_sharp"), get_parser("c_sharp")
+        self.language, self.parser = get_language(lang), get_parser(lang)
         self.scm_file = self.load_scm_file()
 
     def load_scm_file(self):
